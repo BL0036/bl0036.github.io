@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biswas Lamichhane — Business Automation &amp; AI-Assisted Software Developer</title>
+<meta name="description" content="Biswas Lamichhane — 8+ years in hospital procurement and government tender operations in Nepal, now building ERP systems, PWAs, and automation tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12203D;
+    --ink-2:#182B4E;
+    --ink-3:#213C6B;
+    --paper:#F2ECDC;
+    --paper-2:#E8DFC5;
+    --paper-3:#DED2AE;
+    --rule:#C6B98F;
+    --text-on-paper:#1D170E;
+    --text-on-paper-soft:#5C5138;
+    --text-on-ink:#EEE7D4;
+    --text-on-ink-soft:#9FB0CC;
+    --stamp:#A3402D;
+    --stamp-dark:#7C2E20;
+    --gold:#B08A3E;
+    --green:#3F5B3D;
+    --radius:3px;
+    --serif:'Newsreader', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--text-on-paper);
+    font-family:var(--sans); -webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--paper-2) 1px, transparent 1px);
+    background-size: 100% 2.1em;
+    background-position: 0 148px;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1080px;margin:0 auto;padding:0 32px;}
+  @media (max-width:640px){ .container{padding:0 20px;} }
+
+  a:focus-visible, button:focus-visible{outline:2px solid var(--stamp); outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  .rule{border:none;border-top:1px solid var(--rule);margin:0;}
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* ================= NAV ================= */
+  .nav{ position:sticky; top:0; z-index:60; background:rgba(18,32,61,0.95); backdrop-filter:blur(8px); border-bottom:1px solid rgba(238,231,212,0.14); }
+  .nav-inner{ max-width:1080px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; }
+  @media (max-width:640px){ .nav-inner{padding:14px 20px;} }
+  .nav-mark{ font-family:var(--mono); font-size:13px; letter-spacing:.06em; color:var(--text-on-ink); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:8px;}
+  .nav-mark .dot{width:6px;height:6px;border-radius:50%;background:var(--stamp);display:inline-block;}
+  .nav-links{ display:flex; gap:28px; list-style:none; margin:0; padding:0; }
+  .nav-links a{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-on-ink-soft); text-decoration:none; transition:color .15s ease; position:relative; padding-bottom:3px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .25s var(--ease);}
+  .nav-links a:hover{ color:var(--text-on-ink); }
+  .nav-links a:hover::after{width:100%;}
+  @media (max-width:760px){ .nav-links{ display:none; } }
+  .nav-toggle{ display:none; background:none; border:1px solid rgba(238,231,212,.3); border-radius:2px; color:var(--text-on-ink); font-family:var(--mono); font-size:11px; letter-spacing:.06em; padding:7px 12px; cursor:pointer; }
+  @media (max-width:760px){ .nav-toggle{ display:inline-block; } }
+  .nav-mobile{ display:none; flex-direction:column; background:var(--ink-2); border-bottom:1px solid rgba(238,231,212,.14); }
+  .nav-mobile.open{ display:flex; }
+  .nav-mobile a{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-on-ink-soft); text-decoration:none; padding:14px 20px; border-top:1px solid rgba(238,231,212,.08);}
+
+  /* ================= HERO ================= */
+  .hero{
+    background:
+      radial-gradient(1100px 480px at 80% -10%, rgba(176,138,62,.16), transparent 60%),
+      linear-gradient(175deg, var(--ink) 0%, var(--ink-2) 55%, var(--ink-3) 130%);
+    color:var(--text-on-ink); position:relative; overflow:hidden;
+  }
+  .hero::before{
+    content:""; position:absolute; inset:0; opacity:.06; pointer-events:none;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 27px, #fff 28px);
+  }
+  .hero-grid{ display:grid; grid-template-columns:1.35fr .8fr; gap:48px; align-items:center; padding:96px 0 76px; position:relative; z-index:1;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr; padding:64px 0 48px; gap:36px;} }
+  .file-tag{ display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(176,138,62,.45); padding:5px 11px; border-radius:2px; margin-bottom:20px; }
+  .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-on-ink-soft); margin:0 0 10px; }
+  h1{ font-family:var(--serif); font-weight:600; font-size:clamp(2.4rem,5.2vw,3.7rem); line-height:1.02; margin:0 0 10px; letter-spacing:-.01em;}
+  .role{ font-family:var(--serif); font-style:italic; font-weight:400; font-size:clamp(1.05rem,2vw,1.35rem); color:#D8CBA0; margin:0 0 22px; }
+  .lede{ font-size:16.5px; line-height:1.68; color:var(--text-on-ink-soft); max-width:52ch; margin:0 0 30px; }
+  .hero-actions{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:40px; }
+  .btn{ font-family:var(--sans); font-weight:600; font-size:14px; padding:13px 22px; border-radius:2px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:transform .18s var(--ease), box-shadow .18s var(--ease), background .18s ease;}
+  .btn-primary{ background:var(--stamp); color:#F6EEDD; box-shadow:0 1px 0 rgba(0,0,0,.2);}
+  .btn-primary:hover{ background:var(--stamp-dark); transform:translateY(-1px); box-shadow:0 6px 16px rgba(163,64,45,.35); }
+  .btn-ghost{ background:transparent; color:var(--text-on-ink); border:1px solid rgba(238,231,212,.3); }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); transform:translateY(-1px); }
+  .stat-ledger{ display:flex; gap:0; border-top:1px solid rgba(238,231,212,.18); padding-top:22px; }
+  .stat-item{ flex:1; padding-right:20px; }
+  .stat-item + .stat-item{ border-left:1px solid rgba(238,231,212,.14); padding-left:20px; }
+  .stat-num{ display:block; font-family:var(--serif); font-size:2.1rem; font-weight:600; color:#F6EEDD; line-height:1;}
+  .stat-label{ display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--text-on-ink-soft); margin-top:7px; line-height:1.35;}
+
+  .stamp-wrap{ display:flex; justify-content:center; }
+  .stamp{ width:min(280px,80%); filter:drop-shadow(0 10px 26px rgba(0,0,0,.35)); transition:transform .5s var(--ease);}
+  .stamp:hover{ transform:rotate(-4deg) scale(1.03); }
+  .stamp-ring-text{ font-family:var(--mono); font-size:9.4px; letter-spacing:.24em; fill:var(--stamp); text-transform:uppercase;}
+  .stamp-mono{ font-family:var(--serif); font-weight:700; fill:var(--stamp); }
+  @media (max-width:860px){ .stamp-wrap{ order:-1; } .stamp{ width:170px; } }
+
+  /* ================= SECTION HEAD ================= */
+  .section-kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--stamp); margin:0 0 8px;}
+  .section-title{ font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem,3vw,2.1rem); margin:0; letter-spacing:-.01em;}
+  .section-head{ padding:64px 0 28px; }
+  .section-head.tight{ padding-bottom:8px; }
+  section{ position:relative; }
+
+  /* ================= ABOUT ================= */
+  #about{ padding:56px 0 10px; }
+  .about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:52px; align-items:start; }
+  @media (max-width:860px){ .about-grid{grid-template-columns:1fr; gap:32px;} }
+  .form-card{ background:var(--paper-2); border:1px solid var(--rule); border-radius:var(--radius); padding:6px 22px; }
+  .form-row{ display:grid; grid-template-columns:120px 1fr; gap:14px; padding:13px 0; border-bottom:1px solid var(--rule); }
+  .form-row:last-child{ border-bottom:none; }
+  .form-label{ font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-on-paper-soft); padding-top:2px;}
+  .form-value{ font-size:14.5px; font-weight:600; }
+  .about-copy p{ font-size:16px; line-height:1.75; margin:0 0 18px; color:#2A2216;}
+  .about-copy strong{ color:var(--stamp-dark); }
+
+  /* ================= TIMELINE ================= */
+  #timeline{ padding:8px 0 12px; }
+  .tl{ position:relative; margin-top:20px; padding-left:34px; }
+  .tl::before{ content:""; position:absolute; left:9px; top:6px; bottom:6px; width:1px; background:linear-gradient(var(--rule),var(--rule)); background-image:repeating-linear-gradient(180deg, var(--rule) 0 6px, transparent 6px 12px);}
+  .tl-item{ position:relative; padding:0 0 34px 22px; }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-dot{ position:absolute; left:-34px; top:2px; width:19px; height:19px; border-radius:50%; background:var(--paper); border:2px solid var(--stamp); display:flex; align-items:center; justify-content:center;}
+  .tl-dot::after{ content:""; width:6px; height:6px; border-radius:50%; background:var(--stamp);}
+  .tl-item.now .tl-dot{ border-color:var(--green); }
+  .tl-item.now .tl-dot::after{ background:var(--green); }
+  .tl-year{ font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; color:var(--stamp-dark); font-weight:600; }
+  .tl-title{ font-family:var(--serif); font-size:1.15rem; font-weight:600; margin:3px 0 5px; }
+  .tl-desc{ font-size:14.5px; line-height:1.6; color:var(--text-on-paper-soft); max-width:60ch; }
+
+  /* ================= LEDGER STATS ================= */
+  #ledger-stats{ background:var(--ink); color:var(--text-on-ink); padding:64px 0; margin-top:56px; }
+  .ls-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(238,231,212,.14); border:1px solid rgba(238,231,212,.14); }
+  @media (max-width:760px){ .ls-grid{grid-template-columns:repeat(2,1fr);} }
+  .ls-cell{ background:var(--ink); padding:26px 22px; }
+  .ls-num{ font-family:var(--serif); font-weight:600; font-size:1.9rem; color:#F6EEDD; }
+  .ls-label{ font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--text-on-ink-soft); margin-top:8px; line-height:1.4;}
+
+  /* ================= SKILLS ================= */
+  .ledger-table{ width:100%; border-collapse:collapse; margin-top:8px; }
+  .ledger-table tr{ border-bottom:1px solid var(--rule); }
+  .ledger-table td{ padding:13px 10px; font-size:14.5px; vertical-align:top; }
+  .cat{ font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--stamp-dark); width:150px; font-weight:600; }
+  .items{ color:#2A2216; }
+
+  /* ================= PROJECTS ================= */
+  .filter-bar{ display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 30px; }
+  .filter-btn{ font-family:var(--mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; background:transparent; border:1px solid var(--rule); color:var(--text-on-paper-soft); padding:8px 14px; border-radius:20px; cursor:pointer; transition:all .18s ease;}
+  .filter-btn:hover{ border-color:var(--stamp); color:var(--stamp-dark); }
+  .filter-btn.active{ background:var(--ink); border-color:var(--ink); color:var(--text-on-ink); }
+  .cases{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  @media (max-width:760px){ .cases{grid-template-columns:1fr;} }
+  .case-card{ background:var(--paper-2); border:1px solid var(--rule); border-radius:var(--radius); padding:24px 24px 20px; display:flex; flex-direction:column; transition:transform .22s var(--ease), box-shadow .22s var(--ease); }
+  .case-card:hover{ transform:translateY(-3px); box-shadow:0 14px 30px rgba(29,23,14,.1); }
+  .case-card.featured{ grid-column:1 / -1; background:linear-gradient(135deg,var(--paper-2),#EFE6CC); border-color:var(--gold); }
+  .case-top{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:6px; }
+  .case-title{ font-family:var(--serif); font-size:1.28rem; font-weight:600; margin:0; }
+  .case-period{ font-family:var(--mono); font-size:10.5px; color:var(--text-on-paper-soft); white-space:nowrap;}
+  .case-tagline{ font-size:14.5px; color:var(--text-on-paper-soft); margin:0 0 14px; line-height:1.55; }
+  .case-stack{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px; }
+  .chip{ font-family:var(--mono); font-size:10px; letter-spacing:.03em; background:var(--paper); border:1px solid var(--rule); padding:4px 9px; border-radius:20px; color:var(--text-on-paper-soft); }
+  .case-points{ margin:0 0 16px; padding-left:18px; font-size:14px; line-height:1.6; color:#2A2216; flex:1;}
+  .case-points li{ margin-bottom:6px; }
+  .case-foot{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:14px; border-top:1px dashed var(--rule); margin-top:auto; }
+  .mini-stamp{ font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--stamp); color:var(--stamp-dark); padding:4px 9px; border-radius:2px; font-weight:600;}
+  .mini-stamp.prod{ background:var(--green); border-color:var(--green); color:#fff; }
+  .case-link{ font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-decoration:none; border-bottom:1px solid currentColor; color:var(--stamp-dark); }
+  .case-link:hover{ color:var(--stamp); }
+
+  /* ================= EXPERIENCE ================= */
+  .exp-row{ display:grid; grid-template-columns:150px 1fr; gap:24px; padding:26px 0; border-bottom:1px solid var(--rule); }
+  .exp-row:last-child{border-bottom:none;}
+  @media (max-width:640px){ .exp-row{grid-template-columns:1fr; gap:6px;} }
+  .exp-period{ font-family:var(--mono); font-size:12px; color:var(--text-on-paper-soft); padding-top:2px;}
+  .exp-role{ font-family:var(--serif); font-size:1.15rem; font-weight:600; margin:0 0 2px; }
+  .exp-org{ font-family:var(--mono); font-size:12px; color:var(--stamp-dark); margin:0 0 12px; }
+  .exp-points{ margin:0; padding-left:18px; font-size:14.5px; line-height:1.65; color:#2A2216;}
+  .exp-points li{ margin-bottom:6px; }
+
+  /* ================= FOOTER ================= */
+  .footer{ background:var(--ink); color:var(--text-on-ink); padding:70px 0 26px; margin-top:70px;}
+  .footer-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:40px; padding-bottom:34px; }
+  @media (max-width:700px){ .footer-grid{grid-template-columns:1fr;} }
+  .footer h2{ font-family:var(--serif); font-size:2rem; margin:0 0 12px; }
+  .footer p{ color:var(--text-on-ink-soft); line-height:1.6; max-width:46ch; }
+  .footer-links{ display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
+  .footer-links a{ font-family:var(--mono); font-size:14px; text-decoration:none; color:var(--text-on-ink); border-bottom:1px solid rgba(238,231,212,.25); padding-bottom:2px;}
+  .footer-links a:hover{ border-color:var(--gold); color:#F6EEDD; }
+  .footer-bottom{ display:flex; justify-content:space-between; padding-top:22px; border-top:1px solid rgba(238,231,212,.14); font-family:var(--mono); font-size:11px; color:var(--text-on-ink-soft); flex-wrap:wrap; gap:8px;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top"><span class="dot"></span>BL — KATHMANDU</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#timeline">Journey</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile">MENU</button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about">About</a>
+    <a href="#timeline">Journey</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="file-tag">Case File · Open</span>
+      <p class="eyebrow">Kathmandu, Nepal</p>
+      <h1>Biswas Lamichhane</h1>
+      <p class="role">Business Automation &amp; AI-Assisted Software Developer</p>
+      <p class="lede">
+        Eight years spent inside hospital procurement and government tender paperwork in Nepal.
+        The last year spent teaching myself to build the software that replaces it — an ERP,
+        a quotation engine, a business ledger, and a challan/billing manager that's now in
+        daily production use.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="Biswas_Lamichhane_CV.docx">Download CV</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <div class="stat-ledger">
+        <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Years in procurement</span></div>
+        <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">Tools built</span></div>
+        <div class="stat-item"><span class="stat-num">1</span><span class="stat-label">In active daily production use</span></div>
+      </div>
+    </div>
+
+    <div class="stamp-wrap">
+      <div class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="92" fill="none" stroke="var(--stamp)" stroke-width="2.5"/>
+          <circle cx="100" cy="100" r="80" fill="none" stroke="var(--stamp)" stroke-width="1"/>
+          <path id="ringTop" d="M 100,20 A 80,80 0 0 1 180,100" fill="none"/>
+          <path id="ringBottom" d="M 100,180 A 80,80 0 0 1 20,100" fill="none"/>
+          <text class="stamp-ring-text"><textPath href="#ringTop" startOffset="2">KATHMANDU · NEPAL</textPath></text>
+          <text class="stamp-ring-text"><textPath href="#ringBottom" startOffset="2">EST. 2017 · VERIFIED</textPath></text>
+          <text x="100" y="112" text-anchor="middle" class="stamp-mono" font-size="34">BL</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about">
+    <div class="container about-grid">
+      <div class="form-card reveal">
+        <div class="form-row"><div class="form-label">Name</div><div class="form-value">Biswas Lamichhane</div></div>
+        <div class="form-row"><div class="form-label">Based in</div><div class="form-value">Kathmandu, Nepal</div></div>
+        <div class="form-row"><div class="form-label">Education</div><div class="form-value">B.Sc. Physics</div></div>
+        <div class="form-row"><div class="form-label">Operations bg.</div><div class="form-value">Hospital &amp; tender procurement, 8+ yrs</div></div>
+        <div class="form-row"><div class="form-label">Building with</div><div class="form-value">Python, TypeScript, Electron, Firebase</div></div>
+        <div class="form-row"><div class="form-label">Open to</div><div class="form-value">Business automation, Python / AI-assisted dev roles</div></div>
+      </div>
+
+      <div class="about-copy reveal">
+        <p class="section-kicker" style="margin-bottom:14px;">About</p>
+        <p>
+          For nearly eight years I've managed procurement for hospitals across Nepal — surgical
+          and laboratory equipment, government tender documentation, vendor coordination, VAT and
+          PAN paperwork. It's detailed, repetitive, deadline-driven work, and most of it was still
+          being done by hand.
+        </p>
+        <p>
+          Rather than keep absorbing that manual load, I taught myself to build the software that
+          removes it — starting with a full ERP built around my own daily workflow, then a
+          quotation/document generator, a business ledger, and a challan/billing manager. <strong>I
+          build using AI-assisted development</strong>, the way many developers now use Copilot or
+          Cursor: I define the problem, design the data model, table formats, and business logic
+          myself, then use AI to help implement it, and test everything against real daily use at
+          my own office. Not everything I've built is in production yet — I'm upfront about which
+          tools are live and which are still self-tested.
+        </p>
+        <p>
+          I'm not a computer science graduate, and I won't pretend to be a systems architect. What
+          I bring instead is a working understanding of Nepali business operations, procurement,
+          and compliance, paired with the ability to turn that understanding into software people
+          actually rely on.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="timeline">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-kicker">The record</p>
+        <h2 class="section-title">How this happened, in order</h2>
+      </div>
+      <div class="tl">
+        <div class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-year">2017</div>
+          <div class="tl-title">Joined K&amp;K Trade Concern — Accountant</div>
+          <div class="tl-desc">Joined while in the 1st year of his Bachelor's degree, at an office near his college.</div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-year">2019</div>
+          <div class="tl-title">Office Executive Handler</div>
+          <div class="tl-desc">Broadened into day-to-day office execution; hands-on with a commercial ERP-style tool ("Navigator") — the direct spark for building his own.</div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-year">2022</div>
+          <div class="tl-title">Running the office solo</div>
+          <div class="tl-desc">Took on full day-to-day operations of the 6-person office — tenders, quotations, billing, inventory, supplier coordination.</div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-year">Apr 2025 – Feb 2026</div>
+          <div class="tl-title">Learned to code, deliberately</div>
+          <div class="tl-desc">Introduction to Python (Apr 2025) → Kaggle × Google AI Agents course (Dec 2025) → Code IT SQL &amp; Python courses (Jan–Feb 2026).</div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-year">2026</div>
+          <div class="tl-title">Built six tools in one stretch</div>
+          <div class="tl-desc">Nepal ERP → Quotation Generator → KK Ledger → Hamro Kharcha → KK Challan Manager v4 → Multi-Utility Tools, all AI-assisted, all solving real problems from his own job.</div>
+        </div>
+        <div class="tl-item now reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-year">Now</div>
+          <div class="tl-title">Running operations + shipping software</div>
+          <div class="tl-desc">Still doing both jobs at once — and looking for where that combination is the point, not a curiosity.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ledger-stats">
+    <div class="container reveal">
+      <p class="section-kicker" style="color:var(--gold);">By the numbers</p>
+      <div class="ls-grid">
+        <div class="ls-cell"><div class="ls-num">₨2 Cr</div><div class="ls-label">Processed in bills, quotations &amp; tenders in one month — highest volume this year</div></div>
+        <div class="ls-cell"><div class="ls-num">15–16</div><div class="ls-label">Hospital tenders completed — Manthali &amp; Ramechhap, ~₨1 Cr in quotation work</div></div>
+        <div class="ls-cell"><div class="ls-num">6-person</div><div class="ls-label">Office run single-handedly, functional lead role</div></div>
+        <div class="ls-cell"><div class="ls-num">→ 0</div><div class="ls-label">Customer complaints, after redesigning the dispatch workflow</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-kicker">Capabilities</p>
+        <h2 class="section-title">What I work with</h2>
+      </div>
+      <table class="ledger-table reveal">
+        <tr><td class="cat">Languages</td><td class="items">Python · JavaScript / TypeScript · SQL</td></tr>
+        <tr><td class="cat">Frontend</td><td class="items">React · Tailwind CSS</td></tr>
+        <tr><td class="cat">Desktop</td><td class="items">Electron · PyInstaller (Windows packaging)</td></tr>
+        <tr><td class="cat">Backend</td><td class="items">Flask</td></tr>
+        <tr><td class="cat">Database</td><td class="items">PostgreSQL · Firebase</td></tr>
+        <tr><td class="cat">Platforms</td><td class="items">Progressive Web Apps · GitHub · GitHub Pages</td></tr>
+        <tr><td class="cat">Development</td><td class="items">AI-assisted development workflows</td></tr>
+        <tr><td class="cat">Domain</td><td class="items">Government tender process · hospital &amp; medical procurement · VAT/PAN billing compliance · vendor &amp; inventory management</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-kicker">Selected work</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <div class="filter-bar reveal" role="tablist" aria-label="Filter projects by status">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="production">In production</button>
+        <button class="filter-btn" data-filter="use">In use</button>
+        <button class="filter-btn" data-filter="trial">Trial phase</button>
+        <button class="filter-btn" data-filter="public">Public</button>
+      </div>
+
+      <div class="cases">
+
+        <article class="case-card featured reveal" data-status="production">
+          <div class="case-top">
+            <h3 class="case-title">KK Challan Manager v4</h3>
+            <span class="case-period">2026</span>
+          </div>
+          <p class="case-tagline">Replaced manual Excel challan and billing entry — actually relied on every day, not just self-tested.</p>
+          <div class="case-stack">
+            <span class="chip">React</span><span class="chip">Vite</span><span class="chip">Electron</span>
+          </div>
+          <ul class="case-points">
+            <li>The one project in this portfolio in verified, active production use at K&amp;K.</li>
+            <li>Passed a full code security audit — parameterized queries, proper transaction boundaries, contextIsolation enabled.</li>
+            <li>Real bugs found &amp; fixed in that audit: a billed-challan deletion guard, correct backup-before-close ordering, dynamic VAT rate, and PDF injection escaping.</li>
+          </ul>
+          <div class="case-foot">
+            <span class="mini-stamp prod">In production</span>
+            <span class="case-link" style="border:none;color:var(--text-on-paper-soft);">Private repository — available on request</span>
+          </div>
+        </article>
+
+        <article class="case-card reveal" data-status="trial">
+          <div class="case-top">
+            <h3 class="case-title">Nepal ERP</h3>
+            <span class="case-period">2026</span>
+          </div>
+          <p class="case-tagline">A self-built ERP that cut my own 8-hour daily Excel workload down to 1-2 hours.</p>
+          <div class="case-stack">
+            <span class="chip">Flask</span><span class="chip">React</span><span class="chip">PostgreSQL</span><span class="chip">Electron</span>
+          </div>
+          <ul class="case-points">
+            <li>Built to replace my own daily billing, quotation, tender, and inventory workflow — not a generic template.</li>
+            <li>Self-tested, trial phase — I'm the only user right now, still being upgraded.</li>
+            <li>Idea came directly from using a commercial ERP tool ("Navigator") in an earlier role.</li>
+          </ul>
+          <div class="case-foot">
+            <span class="mini-stamp">Trial phase</span>
+            <span class="case-link" style="border:none;color:var(--text-on-paper-soft);">Private — on request</span>
+          </div>
+        </article>
+
+        <article class="case-card reveal" data-status="use">
+          <div class="case-top">
+            <h3 class="case-title">Quotation Generator</h3>
+            <span class="case-period">2026</span>
+          </div>
+          <p class="case-tagline">One tool, three repetitive document types — quotations, bhuktani, and suchi darta.</p>
+          <div class="case-stack">
+            <span class="chip">Electron</span><span class="chip">DOCX</span>
+          </div>
+          <ul class="case-points">
+            <li>Auto-generates Nepali/English-format quotation and payment documents for hospital and government tenders.</li>
+            <li>All table formatting and stamp-placement logic self-designed to match real tender requirements.</li>
+          </ul>
+          <div class="case-foot">
+            <span class="mini-stamp">In use</span>
+            <span class="case-link" style="border:none;color:var(--text-on-paper-soft);">Private — on request</span>
+          </div>
+        </article>
+
+        <article class="case-card reveal" data-status="use">
+          <div class="case-top">
+            <h3 class="case-title">KK Ledger</h3>
+            <span class="case-period">2026</span>
+          </div>
+          <p class="case-tagline">Replaced retyped Excel ledger entries with a searchable app my boss can check from his phone.</p>
+          <div class="case-stack">
+            <span class="chip">HTML/JS</span><span class="chip">Firebase</span>
+          </div>
+          <ul class="case-points">
+            <li>Auto bill-adding and fast search, removing repeated manual retyping.</li>
+            <li>Gave ownership mobile access to live ledger data for the first time.</li>
+            <li>PDF receipt export with embedded company stamp.</li>
+          </ul>
+          <div class="case-foot">
+            <span class="mini-stamp">Deployed</span>
+            <a class="case-link" href="https://github.com/bl0036/k-k" target="_blank" rel="noopener">View repository →</a>
+          </div>
+        </article>
+
+        <article class="case-card reveal" data-status="use">
+          <div class="case-top">
+            <h3 class="case-title">Hamro Kharcha</h3>
+            <span class="case-period">2026</span>
+          </div>
+          <p class="case-tagline">Built to finally properly track a personal habit I already had — noting down my own spending.</p>
+          <div class="case-stack">
+            <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Firebase</span><span class="chip">PWA</span>
+          </div>
+          <ul class="case-points">
+            <li>Categories and subcategories for budget tracking, plus loan-interest, notes, and a private vault.</li>
+            <li>In use by me and 2-3 family members.</li>
+          </ul>
+          <div class="case-foot">
+            <span class="mini-stamp">In use</span>
+            <a class="case-link" href="https://github.com/bl0036/hamro-kharcha" target="_blank" rel="noopener">View repository →</a>
+          </div>
+        </article>
+
+        <article class="case-card reveal" data-status="public">
+          <div class="case-top">
+            <h3 class="case-title">Multi-Utility Tools</h3>
+            <span class="case-period">2026</span>
+          </div>
+          <p class="case-tagline">Started from one real need — a Bikram Sambat ↔ AD date converter — and grew from there.</p>
+          <div class="case-stack">
+            <span class="chip">HTML</span><span class="chip">JavaScript</span>
+          </div>
+          <ul class="case-points">
+            <li>BS↔AD date conversion comes up constantly in my document work — built that first, then added a currency converter, EMI calculator, unit converter, and more.</li>
+          </ul>
+          <div class="case-foot">
+            <span class="mini-stamp">Public</span>
+            <a class="case-link" href="https://github.com/bl0036/MULTI-UTILITY-TOOLS" target="_blank" rel="noopener">View repository →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-kicker">Record</p>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-period">2022 — Present</div>
+        <div>
+          <p class="exp-role">Office Lead <span style="font-weight:400;font-style:italic;color:var(--text-on-paper-soft);font-size:.85em;">(functional scope — no formally conferred title)</span></p>
+          <p class="exp-org">K &amp; K Trade Concern</p>
+          <ul class="exp-points">
+            <li>Run day-to-day operations of a 6-person healthcare-supplies office single-handedly: tenders, quotations, VAT/PAN billing, import/export docs, inventory.</li>
+            <li>Processed ~NPR 2 crore in bills/quotations/tenders in a single month this year — the highest volume handled that year — including 15-16 hospital tenders (Manthali &amp; Ramechhap) totaling ~NPR 1 crore.</li>
+            <li>Redesigned goods-pickup routing and the billing/dispatch workflow; customer complaints dropped sharply as a result.</li>
+            <li>Design and build the internal software — an ERP, a ledger, a document generator, and a challan/billing manager — that now runs alongside this work.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-period">2019 — 2022</div>
+        <div>
+          <p class="exp-role">Office Executive Handler</p>
+          <p class="exp-org">K &amp; K Trade Concern</p>
+          <ul class="exp-points">
+            <li>Broadened from accounting into day-to-day office execution; used a commercial ERP-style billing/inventory system ("Navigator") — the direct origin of the interest in building his own.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-period">2017 — 2019</div>
+        <div>
+          <p class="exp-role">Accountant</p>
+          <p class="exp-org">K &amp; K Trade Concern</p>
+          <ul class="exp-points">
+            <li>Joined while in the 1st year of his Bachelor's degree; core accounting and financial record-keeping.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid reveal">
+      <div>
+        <h2>Let's talk.</h2>
+        <p>Open to business automation, Python developer, and AI-assisted development roles — especially where operations or procurement domain knowledge is useful, not incidental.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:biswaslamichhane00036@gmail.com">biswaslamichhane00036@gmail.com</a>
+        <a href="tel:+97798XXXXXXXX">+977-98XXXXXXXX</a>
+        <a href="https://github.com/bl0036" target="_blank" rel="noopener">github.com/bl0036</a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">linkedin.com/in/your-linkedin</a>
+      </div>
+    </div>
+    <div class="container footer-bottom" style="padding:0;">
+      <span>© 2026 Biswas Lamichhane · Kathmandu, Nepal</span>
+      <span>Case file last updated 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  var navToggle = document.getElementById('navToggle');
+  var navMobile = document.getElementById('navMobile');
+  if(navToggle){
+    navToggle.addEventListener('click', function(){
+      var open = navMobile.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navMobile.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ navMobile.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  // Scroll reveal
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if(prefersReduced || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  // Project filter
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.case-card');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      cards.forEach(function(card){
+        var show = (f === 'all') || (card.getAttribute('data-status') === f);
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
